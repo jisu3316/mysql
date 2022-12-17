@@ -5,6 +5,9 @@ import com.example.mysql.domain.member.service.MemberReadService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+/**
+ * usacase 패키지는 여러 도메인의 흐름을 제어하는 역할을 한다.
+ */
 @Service
 @RequiredArgsConstructor
 public class CreateFollowMemberUsacase {
