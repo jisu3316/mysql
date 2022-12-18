@@ -20,8 +20,8 @@ public class PostBulkInsertTest {
     public void bulkInsert() {
         var easyRandom = PostFixtureFactory.get(
                 2L,
-                LocalDate.of(2000, 1, 1),
-                LocalDate.of(2000, 2, 1)
+                LocalDate.of(1970, 1, 1),
+                LocalDate.of(2022, 2, 1)
         );
 
         var stopWatch = new StopWatch();
@@ -39,6 +39,6 @@ public class PostBulkInsertTest {
         queryStopWatch.start();
         postRepository.bulkInsert(posts);
         queryStopWatch.stop();
-        System.out.println("DB 인서트 시간 = " + stopWatch.getTotalTimeSeconds());
+        System.out.println("DB 인서트 시간 = " + queryStopWatch.getTotalTimeSeconds());
     }
 }
